@@ -1,0 +1,4 @@
+Methodology inspiration: Claude-BugHunter by Sachin Sharma (2026).
+Source: https://github.com/elementalsouls/Claude-BugHunter/tree/8258d29726804f5b954a09c625caedc183f7130d
+The workflow and package were independently written for maintainer-side source review.
+Upstream documentation and upstream code retain their own licenses. See the upstream NOTICE.

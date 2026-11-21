@@ -1,0 +1,78 @@
+{
+  "name": "@wblxr408/bughunter-code-review",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Review local source, diffs and configuration, then write evidence-based findings and remediation.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-plugin-bughunter-code-review"
+  },
+  "files": [
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "agh.market.json",
+    "skills"
+  ],
+  "agnes": {
+    "provides": [
+      "skills",
+      "bundle"
+    ],
+    "metadata": {
+      "displayName": "BugHunter Defensive Code Review",
+      "summary": "Review local source, diffs and configuration, then write evidence-based findings and remediation.",
+      "description": "Review local source, diffs and configuration, then write evidence-based findings and remediation.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "BugHunter 防御代码审查",
+          "summary": "审查本地源代码、补丁和配置，按源码证据整理发现、影响范围和修复建议。",
+          "description": "审查本地源代码、补丁和配置，按源码证据整理发现、影响范围和修复建议。"
+        }
+      }
+    },
+    "contributions": [
+      {
+        "kind": "skill",
+        "id": "@wblxr408/bughunter-code-review",
+        "path": "./skills/bughunter-code-review/SKILL.md"
+      }
+    ],
+    "bundles": {
+      "review": {
+        "profile": {
+          "skills": [
+            "bughunter-code-review"
+          ],
+          "toolPolicy": {
+            "readOnly": true
+          }
+        },
+        "presets": {
+          "bughunter-code-review": {
+            "name": "bughunter-code-review",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "BugHunter Defensive Code Review",
+            "zh-CN": "BugHunter 防御代码审查"
+          },
+          "description": {
+            "en": "Review local source, diffs and configuration, then write evidence-based findings and remediation.",
+            "zh-CN": "审查本地源代码、补丁和配置，按源码证据整理发现、影响范围和修复建议。"
+          },
+          "preset": "bughunter-code-review",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "$bughunter-code-review Review the source or diff I provide. Report confirmed findings and fixes.",
+              "zh-CN": "$bughunter-code-review 请审查我提供的源码或差异，列出证据、影响范围和修复建议。"
+            }
+          }
+        }
+      }
+    }
+  }
+}
